@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Priyanshu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <canvas id="fireworkCanvas" aria-hidden="true"></canvas>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="floating-layer" id="floatingLayer" aria-hidden="true"></div>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Birthday home">PB</a>
+    <nav aria-label="Main navigation">
+      <a href="#message">Message</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#video">Video</a>
+      <a href="#forever">Forever</a>
+    </nav>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Play birthday music">
+      <span class="music-icon"></span>
+      <span id="musicText">Play music</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow">A little midnight surprise</p>
+        <h1>Happy Birthday Priyanshu 🎉💙</h1>
+        <p class="typing-line" aria-label="Animated birthday message">
+          <span id="typingText"></span><span class="cursor">|</span>
+        </p>
+        <div class="hero-actions">
+          <a class="glow-button" href="#message">Read Message</a>
+          <button class="ghost-button" id="surpriseBtn" type="button">Surprise Me</button>
+        </div>
+      </div>
+
+      <div class="cake-stage reveal" aria-label="Animated birthday cake">
+        <div class="cake-halo"></div>
+        <div class="cake">
+          <div class="flame"></div>
+          <div class="candle"></div>
+          <div class="icing icing-top"></div>
+          <div class="cake-layer layer-one"></div>
+          <div class="icing"></div>
+          <div class="cake-layer layer-two"></div>
+          <div class="plate"></div>
+        </div>
+      </div>
+
+      <a class="scroll-indicator" href="#message" aria-label="Scroll to message"></a>
+    </section>
+
+    <section class="message-section section" id="message">
+      <div class="section-title reveal">
+        <p class="eyebrow">Message Section</p>
+        <h2>For the friend who became family</h2>
+      </div>
+      <article class="glass-card message-card reveal">
+        <p>Happy Birthday Priyanshu 🎉💙</p>
+        <p>I still remember the first day we met… honestly, you looked so rude at first 😭😂<br>I never thought that this rude and annoying person would become such an important part of my life.</p>
+        <p>But after knowing you, I realized you’re actually a good person… just a little dumb sometimes 🤡✨</p>
+        <p>Thank you for always making me laugh, listening to my random talks, and being there whenever I need you. Life honestly became more fun after meeting you.</p>
+        <p>I hope this year brings you happiness, success, peace, and lots of good memories.<br>Ani please… ya varshi thoda kami oradat ja 😭😂</p>
+        <p>Happy Birthday once again, bestie 🎂🔥</p>
+      </article>
+    </section>
+
+    <section class="gallery-section section" id="gallery">
+      <div class="section-title reveal">
+        <p class="eyebrow">MEMORY LANE</p>
+        <h2>From random moments to unforgettable memories 💙</h2>
+      </div>
+      <div class="polaroid-wall reveal">
+        <div class="light-string" aria-hidden="true"></div>
+        <button class="polaroid-card" type="button" data-full="images/photo1.jpg" aria-label="Open photo 1">
+          <span class="clip"></span>
+          <img src="photo1.jpg" alt="Priyanshu memory 1">
+          <span class="caption">unexpected friendship 💙</span>
+        </button>
+        <button class="polaroid-card" type="button" data-full="images/photo2.jpg" aria-label="Open photo 2">
+          <span class="clip"></span>
+          <img src="photo2.jpg" alt="Priyanshu memory 2">
+          <span class="caption">the rude guy i kept 😭</span>
+        </button>
+        <button class="polaroid-card" type="button" data-full="images/photo3.jpg" aria-label="Open photo 3">
+          <span class="clip"></span>
+          <img src="photo3.jpg" alt="Priyanshu memory 3">
+          <span class="caption">same vibes forever 🤞💫</span>
+        </button>
+        <button class="polaroid-card" type="button" data-full="images/photo4.jpg" aria-label="Open photo 4">
+          <span class="clip"></span>
+          <img src="photo4.jpg" alt="Priyanshu memory 4">
+          <span class="caption">the best kind of chaos 😭</span>
+        </button>
+        <button class="polaroid-card" type="button" data-full="images/photo5.jpg" aria-label="Open photo 5">
+          <span class="clip"></span>
+          <img src="photo.jpg" alt="Priyanshu memory 5">
+          <span class="caption">just us being us 😂</span>
+        </button>
+        <button class="polaroid-card" type="button" data-full="images/photo6.jpg" aria-label="Open photo 6">
+          <span class="clip"></span>
+          <img src="photo6.jpg" alt="Priyanshu memory 6">
+          <span class="caption">forever bestfriend</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="video-section section" id="video">
+      <div class="section-title reveal">
+        <p class="eyebrow">Cinematic Memory</p>
+        <h2>One of My Favorite Memories 💙</h2>
+      </div>
+      <article class="video-card glass-card reveal">
+        <video src="memory.mp4" autoplay muted loop playsinline></video>
+      </article>
+    </section>
+
+    <section class="secret-section section" id="secret">
+      <div class="section-title reveal">
+        <p class="eyebrow">Hidden Easter Egg</p>
+      </div>
+      <button class="danger-button reveal" id="secretButton" type="button">⚠ Do NOT Click This 😈</button>
+    </section>
+
+    <section class="forever-section section" id="forever">
+      <div class="forever-card glass-card reveal">
+        <p class="eyebrow">Always</p>
+        <h2>Best Friends Forever 💙</h2>
+      </div>
+    </section>
+  </main>
+
+  <div class="surprise-modal" id="surpriseModal" role="dialog" aria-modal="true" aria-labelledby="surpriseTitle" hidden>
+    <div class="surprise-card glass-card">
+      <button class="close-btn" id="closeSurprise" type="button" aria-label="Close surprise">×</button>
+      <div class="gift-spark">✦</div>
+      <h2 id="surpriseTitle">For Priyanshu</h2>
+      <p>Today is all about you, bestie. Stay happy, stay blessed, and keep being the unforgettable person who makes life louder, funnier, and better.</p>
+      <button class="glow-button" id="moreConfetti" type="button">More Confetti</button>
+    </div>
+  </div>
+
+  <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Expanded photo" hidden>
+    <button class="close-btn image-close" id="closeImage" type="button" aria-label="Close image">×</button>
+    <img id="expandedImage" src="" alt="Expanded gallery memory">
+  </div>
+
+  <div class="secret-modal" id="secretModal" role="dialog" aria-modal="true" aria-labelledby="secretTitle" hidden>
+    <div class="secret-card">
+      <button class="close-btn" id="closeSecret" type="button" aria-label="Close secret surprise">×</button>
+      <p class="eyebrow">Secret Surprise</p>
+      <h2 id="secretTitle">Caught being weird again 🤡</h2>
+      <img src="funny-photo.jpg" alt="Funny Priyanshu moment">
+    </div>
+  </div>
+
+  <audio id="funnyAudio" src="funny.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
